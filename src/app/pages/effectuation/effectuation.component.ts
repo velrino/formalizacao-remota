@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-effectuation',
@@ -6,16 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./effectuation.component.scss']
 })
 export class EffectuationComponent implements OnInit {
-  data = {
-    nome: 'Lorem Ipsum da Silva',
-    limite: 2000,
-    anuidade: 1,
-    contratacao: 'aceita'
-  }
+  data: any;
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+    const { state } = history;
+    if (!state.data) {
+      this.goToHome();
+    } else if (state.data) {
+      this.data = state.data;
+    }
   }
 
   enumAnuidade() {
@@ -32,5 +34,9 @@ export class EffectuationComponent implements OnInit {
       'recusar': 'Recusada',
     }
     return tiposContratacao[this.data.contratacao].toLowerCase();
+  }
+
+  goToHome() {
+    this._router.navigate(['home']);
   }
 }
