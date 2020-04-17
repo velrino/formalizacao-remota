@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { EffectuationComponent } from './pages/effectuation/effectuation.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -10,8 +11,9 @@ const routes: Routes = [
 ];
 
 export const AppModuleComponents = [
+  EffectuationComponent,
   HomeComponent,
-  EffectuationComponent
+  HeaderComponent
 ];
 
 @NgModule({
