@@ -16,7 +16,7 @@ export class HomeComponent {
       anuidade: 0,
     },
     novo: {
-      limite: 2000,
+      limite: 10000,
       anuidade: 1,
     }
   }

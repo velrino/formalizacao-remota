@@ -12,7 +12,7 @@
         <div class="col">
             <h6>limite de crédito</h6>
             <p>
-                {{data.atual.limite}}
+                {{ data.atual.limite | currency: 'BRL' }}
             </p>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="col">
             <h6>novo limite de crédito</h6>
             <p>
-                {{data.novo.limite}}
+                {{ data.novo.limite | currency: 'BRL' }}
             </p>
         </div>
     </div>
@@ -44,7 +44,8 @@
 </div>
 <div class="row mt-5 m-1">
     <div class="col text-center">
-        <button type="button" class="btn btn-outline-primary btn-block" (click)="goToEffectuation('recusar')">recusar</button>
+        <button type="button" class="btn btn-outline-primary btn-block"
+            (click)="goToEffectuation('recusar')">recusar</button>
         <button type="button" class="btn btn-warning btn-block" (click)="goToEffectuation('aceita')">aceitar</button>
     </div>
 </div>
