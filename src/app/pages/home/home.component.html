@@ -1,1 +1,57 @@
-<p>home works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h6>nome adicional</h6>
+            <p>
+                {{data.nome}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>limite de crédito</h6>
+            <p>
+                {{data.atual.limite}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>anuidade atual</h6>
+            <p>
+                {{enumAnuidade(data.atual.anuidade)}}
+            </p>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="row">
+        <div class="col">
+            <h6>nome adicional</h6>
+            <p>
+                {{data.nome}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>novo limite de crédito</h6>
+            <p>
+                {{data.novo.limite}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>nova anuidade</h6>
+            <p>
+                {{enumAnuidade(data.novo.anuidade)}}
+            </p>
+        </div>
+    </div>
+    <div class="row mt-5 navbar navbar-fixed-bottom">
+        <div class="col text-center">
+            <button type="button" class="btn btn-outline-primary btn-block">recusar</button>
+            <button type="button" class="btn btn-warning btn-block">aceitar</button>
+        </div>
+    </div>
+</div>
