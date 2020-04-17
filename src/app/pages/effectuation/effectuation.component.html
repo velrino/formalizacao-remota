@@ -1,8 +1,8 @@
 <app-header title="Efetivação"></app-header>
 <div class="alert alert-success m-0" role="alert">
     <p> Parabéns sua contratação foi <strong>{{enumContratacao()}}</strong> com sucesso!</p>
-    <hr>
-    <p class="mb-0">Seu novo cartão chegará em até 10 dias úteis.</p>
+    <hr *ngIf="hasContratacaoIsAceita()">
+    <p class="mb-0" *ngIf="hasContratacaoIsAceita()">Seu novo cartão chegará em até 10 dias úteis.</p>
 </div>
 <div class="container mt-5">
     <div class="row">

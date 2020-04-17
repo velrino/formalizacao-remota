@@ -39,4 +39,8 @@ export class EffectuationComponent implements OnInit {
   goToHome() {
     this._router.navigate(['home']);
   }
+
+  hasContratacaoIsAceita() {
+    return this.data.contratacao == 'aceita';
+  }
 }
