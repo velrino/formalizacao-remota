@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --baseHref='https://velrino.github.io/formalizacao-remota/' && npm run upload",
+    "upload": "npx ngh --repo=git@github.com:velrino/formalizacao-remota.git --name=velrino --email=denismagalhaesvelrino@gmail.com  --branch=gh-pages --dir=dist/"
   },
   "private": true,
   "dependencies": {
@@ -29,9 +31,10 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
