@@ -1,6 +1,6 @@
 <app-header title="Cartão Upgrade"></app-header>
 <div class="container mt-5">
-    <div class="row">
+    <div class="row" role="text">
         <div class="col">
             <h6>nome adicional</h6>
             <p>
@@ -8,7 +8,7 @@
             </p>
         </div>
     </div>
-    <div class="row">
+    <div class="row" role="text">
         <div class="col">
             <h6>limite de crédito</h6>
             <p>
@@ -16,7 +16,7 @@
             </p>
         </div>
     </div>
-    <div class="row">
+    <div class="row" role="text">
         <div class="col">
             <h6>anuidade atual</h6>
             <p>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <hr>
-    <div class="row">
+    <div class="row" role="text">
         <div class="col">
             <h6>novo limite de crédito</h6>
             <p>
@@ -33,7 +33,7 @@
             </p>
         </div>
     </div>
-    <div class="row">
+    <div class="row" role="text">
         <div class="col">
             <h6>nova anuidade</h6>
             <p>
@@ -45,7 +45,7 @@
 <div class="row mt-5 m-1">
     <div class="col text-center">
         <button type="button" class="btn btn-outline-primary btn-block"
-            (click)="goToEffectuation('recusar')">recusar</button>
-        <button type="button" class="btn btn-warning btn-block" (click)="goToEffectuation('aceita')">aceitar</button>
+            (click)="goToEffectuation('recusar')" aria-label="Eu não quero contratar">recusar</button>
+        <button type="button" class="btn btn-warning btn-block" (click)="goToEffectuation('aceita')" aria-label="Eu quero contratar">aceitar</button>
     </div>
 </div>
