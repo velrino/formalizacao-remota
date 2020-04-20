@@ -1,7 +1,7 @@
 <app-header title="Cartão Upgrade"></app-header>
 <div class="container mt-5">
     <div class="row" role="text">
-        <div class="col">
+        <div class="col accessibility">
             <h6>nome adicional</h6>
             <p>
                 {{data.nome}}
@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="row" role="text">
-        <div class="col">
+        <div class="col accessibility">
             <h6>limite de crédito</h6>
             <p>
                 {{ data.atual.limite | currency: 'BRL' }}
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row" role="text">
-        <div class="col">
+        <div class="col accessibility">
             <h6>anuidade atual</h6>
             <p>
                 {{enumAnuidade(data.atual.anuidade)}}
@@ -26,7 +26,7 @@
     </div>
     <hr>
     <div class="row" role="text">
-        <div class="col">
+        <div class="col accessibility">
             <h6>novo limite de crédito</h6>
             <p>
                 {{ data.novo.limite | currency: 'BRL' }}
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="row" role="text">
-        <div class="col">
+        <div class="col accessibility">
             <h6>nova anuidade</h6>
             <p>
                 {{enumAnuidade(data.novo.anuidade)}}
@@ -44,8 +44,8 @@
 </div>
 <div class="row mt-5 m-1">
     <div class="col text-center">
-        <button type="button" class="btn btn-outline-primary btn-block"
+        <button type="button" class="btn btn-outline-primary btn-block accessibility"
             (click)="goToEffectuation('recusar')" aria-label="Eu não quero contratar">recusar</button>
-        <button type="button" class="btn btn-warning btn-block" (click)="goToEffectuation('aceita')" aria-label="Eu quero contratar">aceitar</button>
+        <button type="button" class="btn btn-warning btn-block accessibility" (click)="goToEffectuation('aceita')" aria-label="Eu quero contratar">aceitar</button>
     </div>
 </div>

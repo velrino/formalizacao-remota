@@ -1,14 +1,14 @@
 <app-header title="Efetivação"></app-header>
 <div class="alert alert-success m-0" role="alert">
-    <p> Parabéns sua contratação foi <strong>{{enumContratacao()}}</strong> com sucesso!</p>
+    <p class="accessibility"> Parabéns sua contratação foi <strong>{{enumContratacao()}}</strong> com sucesso!</p>
     <hr *ngIf="hasContratacaoIsAceita()">
-    <p class="mb-0" *ngIf="hasContratacaoIsAceita()">Seu novo cartão chegará em até 10 dias úteis.</p>
+    <p class="mb-0 accessibility" *ngIf="hasContratacaoIsAceita()">Seu novo cartão chegará em até 10 dias úteis.</p>
 </div>
 <div class="container mt-5">
     <div class="row">
         <div class="col">
 
-            <div class="card">
+            <div class="card accessibility">
                 <div class="card-body">
                     <h6>nome</h6>
                     <p>
@@ -29,6 +29,6 @@
 </div>
 <div class="row mt-5 m-1">
     <div class="col text-center">
-        <button type="button" class="btn btn-warning btn-block" (click)="goToHome()">voltar</button>
+        <button type="button" class="btn btn-warning btn-block accessibility" (click)="goToHome()">voltar</button>
     </div>
 </div>

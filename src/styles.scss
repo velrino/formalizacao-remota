@@ -14,3 +14,9 @@ h6 {
   background-color: #4ca750;
   border-color: #4ca750;
 }
+
+.accessibility {
+  &.accessibility-show {
+    border: 2px dashed purple !important;
+  }
+}
